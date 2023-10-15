@@ -3,6 +3,7 @@ import '../widgets/Floating_btn.dart';
 import '../widgets/home_appBar.dart';
 import '../widgets/logo_char.dart';
 import '../widgets/task_builder.dart';
+import "../widgets/exit_dialog.dart";
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -12,14 +13,17 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       floatingActionButton: floatingBtn(),
       appBar: homeAppBar(),
-      body: Container(
-        padding: const EdgeInsets.fromLTRB(15, 25, 15, 30),
+      body: WillPopScope(
+        onWillPop: () async => exitDialog(),
         child: Container(
-          padding: const EdgeInsets.all(5),
-          child: Stack(children: [
-            logoChar(), // الشخصية
-            tasksBuilder(), // باني المهام
-          ]),
+          padding: const EdgeInsets.fromLTRB(15, 25, 15, 30),
+          child: Container(
+            padding: const EdgeInsets.all(5),
+            child: Stack(children: [
+              logoChar(), // الشخصية
+              tasksBuilder(), // باني المهام
+            ]),
+          ),
         ),
       ),
     );

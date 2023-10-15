@@ -29,6 +29,8 @@ class MyTranslation implements Translations {
           "addNew_snackMsg": "تمت اضافة مهمة بنجاح",
           "deleteTask_snackTitle": "نجاح",
           "deleteTask_snackMsg": "تم حذف المهمة بنجاح",
+          "exitDialog": "هل تريد الخروج ؟",
+          "yes": "نعم",
         },
         "en": {
           "app_title": "My Tasks",
@@ -56,6 +58,8 @@ class MyTranslation implements Translations {
           "addNew_snackMsg": "Task has been Added",
           "deleteTask_snackTitle": "Success",
           "deleteTask_snackMsg": "Task has been Deleted",
+          "exitDialog": "Do You want to Exit?",
+          "yes": "Yes",
         },
       };
 }
